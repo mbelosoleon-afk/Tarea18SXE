@@ -24,8 +24,10 @@ DIAGNÓSTICOS DE LOS PACIENTES. LA SANIDAD EMPEORA CADA VEZ MÁS.
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-        'views/views.xml',
-        'views/templates.xml',
+        'views/diagnosticoView.xml',
+        'views/medicoView.xml',
+        'views/pacienteView.xml',
+        'views/menu.xml'
     ],
     # only loaded in demonstration mode
     'demo': [

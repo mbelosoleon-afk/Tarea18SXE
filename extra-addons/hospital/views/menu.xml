@@ -1,0 +1,35 @@
+<odoo>
+    <data>
+
+        <menuitem id="hospital_menu" name="Menú Hospital" sequence="1"/>
+
+        <menuitem id="hospital_medico_menu" name="Médicos" parent="hospital_menu"/>
+        <menuitem id="hospital_pacientes_menu" name="Pacientes" parent="hospital_menu"/>
+        <menuitem id="hospital_diagnostico_menu" name="Diagnósticos" parent="hospital_menu"/>
+
+        <record id="action_hospital_medico" model="ir.actions.act_window">
+            <field name="name">Médicos</field>
+            <field name="res_model">hospital.medico</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+        <menuitem id="menu_action_hospital_medico" name="Menú Médicos" parent="hospital_medico_menu" action="action_hospital_medico"/>
+
+        <record id="action_hospital_paciente" model="ir.actions.act_window">
+            <field name="name">Paciente</field>
+            <field name="res_model">hospital.paciente</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+        <menuitem id="menu_action_hospital_paciente" name="Menú Pacientes" parent="hospital_paciente_menu" action="action_hospital_medico"/>
+
+    <record id="action_hospital_diagnostico" model="ir.actions.act_window">
+        <field name="name">Diagnosticos</field>
+        <field name="res_model">hospital.diagnostico</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="menu_action_hospital_diagnosticos" name="Diagnósticos" parent="hospital_diagnosticos_menu" action="action_hospital_diagnostico"/>
+
+    </data>
+</odoo>
