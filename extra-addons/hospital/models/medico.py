@@ -3,6 +3,7 @@ from odoo import models, fields, api
 class Medico(models.Model):
     _name = 'hospital.medico'
     _description = 'hospital.medico'
+    _rec_name = 'nombre'
 
     nombre = fields.Char(string="Nombre del médico", required=True)
     apellidos = fields.Char(string="Apellidos del médico", required=True)
